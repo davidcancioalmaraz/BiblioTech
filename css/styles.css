@@ -775,6 +775,11 @@ select:focus-visible {
     font-size: 1.125rem;
   }
 
+  /* The sidebar already carries the session link on this width */
+  .topbar-logout {
+    display: none;
+  }
+
   /* One column everywhere */
   .metrics {
     grid-template-columns: 1fr;
