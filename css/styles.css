@@ -16,6 +16,7 @@
    14. Section header
    15. Filter bar
    16. Forms
+   17. Responsive (single breakpoint at 768px)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -691,4 +692,133 @@ select:focus-visible {
   margin-top: var(--space-xl);
   padding-top: var(--space-lg);
   border-top: 1px solid var(--color-border);
+}
+
+/* --------------------------------------------------------------------------
+   17. Responsive — single breakpoint
+   The sidebar becomes a horizontal top bar, grids collapse to one column
+   and wide tables scroll inside their own container.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  /* Shell: stack the sidebar on top of the content */
+  .app {
+    flex-direction: column;
+  }
+
+  .main {
+    height: auto;
+  }
+
+  .content {
+    padding: var(--space-md);
+    overflow-y: visible;
+  }
+
+  /* Sidebar turned into a top bar */
+  .sidebar {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Row one: brand and session link. Row two: the menu, full width. */
+  .sidebar-brand {
+    order: 1;
+    flex: 1;
+    padding: var(--space-md);
+    border-bottom: none;
+  }
+
+  .sidebar-footer {
+    order: 2;
+    padding: 0 var(--space-md) 0 0;
+    border-top: none;
+  }
+
+  .sidebar-nav {
+    order: 3;
+    flex-basis: 100%;
+    min-width: 0;
+    padding: 0;
+    overflow-x: auto;
+    border-top: 1px solid rgba(248, 250, 252, 0.12);
+  }
+
+  .sidebar-nav ul {
+    display: flex;
+  }
+
+  .sidebar-link {
+    padding: 12px var(--space-md);
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+  }
+
+  .sidebar-link.is-active {
+    border-left-color: transparent;
+    border-bottom-color: var(--color-primary);
+  }
+
+  /* Top bar */
+  .topbar {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+  }
+
+  .topbar-title {
+    font-size: 1.125rem;
+  }
+
+  /* One column everywhere */
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--space-md);
+  }
+
+  .filter-field-wide {
+    min-width: 0;
+  }
+
+  /* Wide tables scroll inside the panel, never on the body */
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .table {
+    min-width: 640px;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px var(--space-md);
+  }
+
+  .form {
+    padding: var(--space-md);
+  }
+
+  /* Login card on a narrow screen */
+  .login-card {
+    padding: var(--space-lg);
+  }
 }
