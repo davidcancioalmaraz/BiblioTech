@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BiblioTech — Nuevo préstamo</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="app">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <p class="brand brand-inverse">BiblioTech</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a class="sidebar-link" href="dashboard.html">Panel</a></li>
+          <li><a class="sidebar-link" href="books.html">Libros</a></li>
+          <li><a class="sidebar-link is-active" href="loans.html">Préstamos</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a class="sidebar-link" href="index.html">Cerrar sesión</a>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <h1 class="topbar-title">Préstamos</h1>
+        <div class="topbar-user">
+          <span class="topbar-username">Elena Vargas Nieto</span>
+          <a class="topbar-logout" href="index.html">Cerrar sesión</a>
+        </div>
+      </header>
+
+      <main class="content">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Nuevo préstamo</h2>
+            <p class="section-subtitle">Registra la salida de un ejemplar</p>
+          </div>
+        </div>
+
+        <section class="panel">
+          <form class="form" action="loans.html" method="get">
+            <div class="form-grid">
+              <div class="field">
+                <label class="field-label" for="code">Código</label>
+                <input
+                  class="field-input"
+                  type="text"
+                  id="code"
+                  name="code"
+                  placeholder="PRE-021"
+                  maxlength="10"
+                  required
+                />
+                <p class="field-hint">Formato recomendado: PRE-000</p>
+              </div>
+
+              <div class="field">
+                <label class="field-label" for="status">Estado</label>
+                <select class="field-select" id="status" name="status">
+                  <option value="active">Activo</option>
+                  <option value="returned">Devuelto</option>
+                  <option value="overdue">Vencido</option>
+                </select>
+              </div>
+
+              <div class="field field-full">
+                <label class="field-label" for="book">Libro</label>
+                <select class="field-select" id="book" name="book">
+                  <option value="LIB-001">LIB-001 — Cien años de soledad</option>
+                  <option value="LIB-002">LIB-002 — Rayuela</option>
+                  <option value="LIB-003">LIB-003 — Los santos inocentes</option>
+                  <option value="LIB-004">LIB-004 — La sombra del viento</option>
+                  <option value="LIB-005">LIB-005 — Ensayo sobre la ceguera</option>
+                  <option value="LIB-006">LIB-006 — El laberinto de la soledad</option>
+                  <option value="LIB-007">LIB-007 — Aprende a programar con Python</option>
+                  <option value="LIB-008">LIB-008 — Manual de estilo de la lengua española</option>
+                  <option value="LIB-009">LIB-009 — Manolito Gafotas</option>
+                  <option value="LIB-010">LIB-010 — Diccionario de la lengua española</option>
+                </select>
+              </div>
+
+              <div class="field field-full">
+                <label class="field-label" for="member">Socio</label>
+                <input
+                  class="field-input"
+                  type="text"
+                  id="member"
+                  name="member"
+                  placeholder="Nombre y apellidos del socio"
+                  maxlength="80"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label class="field-label" for="loan_date">Fecha de préstamo</label>
+                <input class="field-input" type="date" id="loan_date" name="loan_date" required />
+              </div>
+
+              <div class="field">
+                <label class="field-label" for="due_date">Fecha de devolución</label>
+                <input class="field-input" type="date" id="due_date" name="due_date" required />
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <a class="btn btn-secondary" href="loans.html">Cancelar</a>
+              <button class="btn btn-primary" type="submit">Guardar</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
