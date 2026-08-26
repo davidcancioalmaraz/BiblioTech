@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BiblioTech — Panel</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="app">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <p class="brand brand-inverse">BiblioTech</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a class="sidebar-link is-active" href="dashboard.html">Panel</a></li>
+          <li><a class="sidebar-link" href="books.html">Libros</a></li>
+          <li><a class="sidebar-link" href="loans.html">Préstamos</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a class="sidebar-link" href="index.html">Cerrar sesión</a>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <h1 class="topbar-title">Panel</h1>
+        <div class="topbar-user">
+          <span class="topbar-username">Elena Vargas Nieto</span>
+          <a class="topbar-logout" href="index.html">Cerrar sesión</a>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="metrics">
+          <article class="metric-card">
+            <p class="metric-label">Libros registrados</p>
+            <p class="metric-value">10</p>
+            <p class="metric-hint">En el catálogo</p>
+          </article>
+
+          <article class="metric-card">
+            <p class="metric-label">Préstamos activos</p>
+            <p class="metric-value">6</p>
+            <p class="metric-hint">Pendientes de devolución</p>
+          </article>
+
+          <article class="metric-card">
+            <p class="metric-label">Préstamos vencidos</p>
+            <p class="metric-value">2</p>
+            <p class="metric-hint">Fuera de plazo</p>
+          </article>
+
+          <article class="metric-card">
+            <p class="metric-label">Socios activos</p>
+            <p class="metric-value">8</p>
+            <p class="metric-hint">Con préstamo en curso</p>
+          </article>
+        </section>
+
+        <section class="panel">
+          <header class="panel-header">
+            <h2 class="panel-title">Últimos préstamos</h2>
+            <a class="panel-action" href="loans.html">Ver todos</a>
+          </header>
+
+          <div class="table-wrapper">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Código</th>
+                  <th>Libro</th>
+                  <th>Socio</th>
+                  <th>Fecha de devolución</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PRE-020</td>
+                  <td>LIB-004 — La sombra del viento</td>
+                  <td>Lucía Moreno Prats</td>
+                  <td>05/09/2026</td>
+                  <td><span class="badge badge-active">Activo</span></td>
+                </tr>
+                <tr>
+                  <td>PRE-019</td>
+                  <td>LIB-009 — Manolito Gafotas</td>
+                  <td>Andrés Quiroga Vidal</td>
+                  <td>04/09/2026</td>
+                  <td><span class="badge badge-active">Activo</span></td>
+                </tr>
+                <tr>
+                  <td>PRE-018</td>
+                  <td>LIB-002 — Rayuela</td>
+                  <td>Javier Ortega Salas</td>
+                  <td>18/08/2026</td>
+                  <td><span class="badge badge-overdue">Vencido</span></td>
+                </tr>
+                <tr>
+                  <td>PRE-017</td>
+                  <td>LIB-006 — El laberinto de la soledad</td>
+                  <td>María Fernández Ruiz</td>
+                  <td>08/09/2026</td>
+                  <td><span class="badge badge-active">Activo</span></td>
+                </tr>
+                <tr>
+                  <td>PRE-016</td>
+                  <td>LIB-007 — Aprende a programar con Python</td>
+                  <td>Carmen Ibáñez Soler</td>
+                  <td>12/08/2026</td>
+                  <td><span class="badge badge-returned">Devuelto</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BiblioTech — Préstamos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="app">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <p class="brand brand-inverse">BiblioTech</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a class="sidebar-link" href="dashboard.html">Panel</a></li>
+          <li><a class="sidebar-link" href="books.html">Libros</a></li>
+          <li><a class="sidebar-link is-active" href="loans.html">Préstamos</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a class="sidebar-link" href="index.html">Cerrar sesión</a>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <h1 class="topbar-title">Préstamos</h1>
+        <div class="topbar-user">
+          <span class="topbar-username">Elena Vargas Nieto</span>
+          <a class="topbar-logout" href="index.html">Cerrar sesión</a>
+        </div>
+      </header>
+
+      <main class="content">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Préstamos registrados</h2>
+            <p class="section-subtitle">10 operaciones en el histórico</p>
+          </div>
+          <a class="btn btn-primary" href="new-loan.html">Nuevo préstamo</a>
+        </div>
+
+        <div class="filters">
+          <div class="filter-field filter-field-wide">
+            <label class="field-label" for="search">Buscar</label>
+            <input
+              class="field-input"
+              type="text"
+              id="search"
+              name="search"
+              placeholder="Código, libro o socio"
+            />
+          </div>
+
+          <div class="filter-field">
+            <label class="field-label" for="status">Estado</label>
+            <select class="field-select" id="status" name="status">
+              <option value="">Todos los estados</option>
+              <option value="active">Activo</option>
+              <option value="returned">Devuelto</option>
+              <option value="overdue">Vencido</option>
+            </select>
+          </div>
+        </div>
+
+        <section class="panel">
+          <div class="table-wrapper">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Código</th>
+                  <th>Libro</th>
+                  <th>Socio</th>
+                  <th>Fecha de préstamo</th>
+                  <th>Fecha de devolución</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PRE-020</td>
+                  <td>LIB-004 — La sombra del viento</td>
+                  <td>Lucía Moreno Prats</td>
+                  <td>22/08/2026</td>
+                  <td>05/09/2026</td>
+                  <td><span class="badge badge-active">Activo</span></td>
+                </tr>
+                <tr>
+                  <td>PRE-019</td>
+                  <td>LIB-009 — Manolito Gafotas</td>
+                  <td>Andrés Quiroga Vidal</td>
+                  <td>21/08/2026</td>
+                  <td>04/09/2026</td>
+                  <td><span class="badge badge-active">Activo</span></td>
+                </tr>
+                <tr>
+                  <td>PRE-018</td>
+                  <td>LIB-002 — Rayuela</td>
+                  <td>Javier Ortega Salas</td>
+                  <td>04/08/2026</td>
+                  <td>18/08/2026</td>
+                  <td><span class="badge badge-overdue">Vencido</span></td>
+                </tr>
+                <tr>
+                  <td>PRE-017</td>
+                  <td>LIB-006 — El laberinto de la soledad</td>
+                  <td>María Fernández Ruiz</td>
+                  <td>25/08/2026</td>
+                  <td>08/09/2026</td>
+                  <td><span class="badge badge-active">Activo</span></td>
+                </tr>
+                <tr>
+                  <td>PRE-016</td>
+                  <td>LIB-007 — Aprende a programar con Python</td>
+                  <td>Carmen Ibáñez Soler</td>
+                  <td>29/07/2026</td>
+                  <td>12/08/2026</td>
+                  <td><span class="badge badge-returned">Devuelto</span></td>
+                </tr>
+                <tr>
+                  <td>PRE-015</td>
+                  <td>LIB-001 — Cien años de soledad</td>
+                  <td>Marta Sanz Herrero</td>
+                  <td>18/08/2026</td>
+                  <td>01/09/2026</td>
+                  <td><span class="badge badge-active">Activo</span></td>
+                </tr>
+                <tr>
+                  <td>PRE-014</td>
+                  <td>LIB-005 — Ensayo sobre la ceguera</td>
+                  <td>Diego Herrán Lozano</td>
+                  <td>27/07/2026</td>
+                  <td>10/08/2026</td>
+                  <td><span class="badge badge-returned">Devuelto</span></td>
+                </tr>
+                <tr>
+                  <td>PRE-013</td>
+                  <td>LIB-003 — Los santos inocentes</td>
+                  <td>Sergio Bravo Alonso</td>
+                  <td>20/08/2026</td>
+                  <td>03/09/2026</td>
+                  <td><span class="badge badge-active">Activo</span></td>
+                </tr>
+                <tr>
+                  <td>PRE-012</td>
+                  <td>LIB-001 — Cien años de soledad</td>
+                  <td>Nuria Peláez Gómez</td>
+                  <td>30/07/2026</td>
+                  <td>13/08/2026</td>
+                  <td><span class="badge badge-overdue">Vencido</span></td>
+                </tr>
+                <tr>
+                  <td>PRE-011</td>
+                  <td>LIB-008 — Manual de estilo de la lengua española</td>
+                  <td>Rubén Castaño Vila</td>
+                  <td>24/08/2026</td>
+                  <td>07/09/2026</td>
+                  <td><span class="badge badge-active">Activo</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

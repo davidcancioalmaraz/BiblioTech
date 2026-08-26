@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BiblioTech — Libros</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="app">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <p class="brand brand-inverse">BiblioTech</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a class="sidebar-link" href="dashboard.html">Panel</a></li>
+          <li><a class="sidebar-link is-active" href="books.html">Libros</a></li>
+          <li><a class="sidebar-link" href="loans.html">Préstamos</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a class="sidebar-link" href="index.html">Cerrar sesión</a>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <h1 class="topbar-title">Libros</h1>
+        <div class="topbar-user">
+          <span class="topbar-username">Elena Vargas Nieto</span>
+          <a class="topbar-logout" href="index.html">Cerrar sesión</a>
+        </div>
+      </header>
+
+      <main class="content">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Catálogo de libros</h2>
+            <p class="section-subtitle">10 títulos registrados</p>
+          </div>
+          <a class="btn btn-primary" href="new-book.html">Nuevo libro</a>
+        </div>
+
+        <div class="filters">
+          <div class="filter-field filter-field-wide">
+            <label class="field-label" for="search">Buscar</label>
+            <input
+              class="field-input"
+              type="text"
+              id="search"
+              name="search"
+              placeholder="Título, autor o código"
+            />
+          </div>
+
+          <div class="filter-field">
+            <label class="field-label" for="category">Categoría</label>
+            <select class="field-select" id="category" name="category">
+              <option value="">Todas las categorías</option>
+              <option value="fiction">Ficción</option>
+              <option value="essay">Ensayo</option>
+              <option value="technical">Técnico</option>
+              <option value="children">Infantil</option>
+              <option value="reference">Referencia</option>
+            </select>
+          </div>
+        </div>
+
+        <section class="panel">
+          <div class="table-wrapper">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Código</th>
+                  <th>Título</th>
+                  <th>Autor</th>
+                  <th>Categoría</th>
+                  <th>Año</th>
+                  <th>Ejemplares</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>LIB-001</td>
+                  <td>Cien años de soledad</td>
+                  <td>Gabriel García Márquez</td>
+                  <td>Ficción</td>
+                  <td>1967</td>
+                  <td>4</td>
+                  <td><span class="badge badge-available">Disponible</span></td>
+                </tr>
+                <tr>
+                  <td>LIB-002</td>
+                  <td>Rayuela</td>
+                  <td>Julio Cortázar</td>
+                  <td>Ficción</td>
+                  <td>1963</td>
+                  <td>3</td>
+                  <td><span class="badge badge-on-loan">Prestado</span></td>
+                </tr>
+                <tr>
+                  <td>LIB-003</td>
+                  <td>Los santos inocentes</td>
+                  <td>Miguel Delibes</td>
+                  <td>Ficción</td>
+                  <td>1981</td>
+                  <td>2</td>
+                  <td><span class="badge badge-available">Disponible</span></td>
+                </tr>
+                <tr>
+                  <td>LIB-004</td>
+                  <td>La sombra del viento</td>
+                  <td>Carlos Ruiz Zafón</td>
+                  <td>Ficción</td>
+                  <td>2001</td>
+                  <td>5</td>
+                  <td><span class="badge badge-on-loan">Prestado</span></td>
+                </tr>
+                <tr>
+                  <td>LIB-005</td>
+                  <td>Ensayo sobre la ceguera</td>
+                  <td>José Saramago</td>
+                  <td>Ficción</td>
+                  <td>1995</td>
+                  <td>2</td>
+                  <td><span class="badge badge-under-repair">En reparación</span></td>
+                </tr>
+                <tr>
+                  <td>LIB-006</td>
+                  <td>El laberinto de la soledad</td>
+                  <td>Octavio Paz</td>
+                  <td>Ensayo</td>
+                  <td>1950</td>
+                  <td>3</td>
+                  <td><span class="badge badge-available">Disponible</span></td>
+                </tr>
+                <tr>
+                  <td>LIB-007</td>
+                  <td>Aprende a programar con Python</td>
+                  <td>Ana Belén Ruiz</td>
+                  <td>Técnico</td>
+                  <td>2019</td>
+                  <td>6</td>
+                  <td><span class="badge badge-available">Disponible</span></td>
+                </tr>
+                <tr>
+                  <td>LIB-008</td>
+                  <td>Manual de estilo de la lengua española</td>
+                  <td>José Martínez de Sousa</td>
+                  <td>Referencia</td>
+                  <td>2015</td>
+                  <td>2</td>
+                  <td><span class="badge badge-available">Disponible</span></td>
+                </tr>
+                <tr>
+                  <td>LIB-009</td>
+                  <td>Manolito Gafotas</td>
+                  <td>Elvira Lindo</td>
+                  <td>Infantil</td>
+                  <td>1994</td>
+                  <td>7</td>
+                  <td><span class="badge badge-on-loan">Prestado</span></td>
+                </tr>
+                <tr>
+                  <td>LIB-010</td>
+                  <td>Diccionario de la lengua española</td>
+                  <td>Real Academia Española</td>
+                  <td>Referencia</td>
+                  <td>2014</td>
+                  <td>1</td>
+                  <td><span class="badge badge-under-repair">En reparación</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
