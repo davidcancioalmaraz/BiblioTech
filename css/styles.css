@@ -13,6 +13,8 @@
    11. Metric cards
    12. Panel and data table
    13. Status badges
+   14. Section header
+   15. Filter bar
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -220,6 +222,22 @@ select:focus-visible {
 }
 
 .field-input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-primary-soft);
+}
+
+.field-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.field-select:focus {
   border-color: var(--color-primary);
   outline: none;
   box-shadow: 0 0 0 3px var(--color-primary-soft);
@@ -574,4 +592,59 @@ select:focus-visible {
 .badge-overdue {
   background-color: #fee2e2;
   color: #991b1b;
+}
+
+/* --------------------------------------------------------------------------
+   14. Section header — page title plus its primary action
+   -------------------------------------------------------------------------- */
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.section-title {
+  font-size: 1.25rem;
+}
+
+.section-subtitle {
+  margin-top: 2px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   15. Filter bar — decorative only, these controls have no behavior
+   -------------------------------------------------------------------------- */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.filter-field-wide {
+  flex: 1;
+  min-width: 220px;
+}
+
+.filter-field .field-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
 }
